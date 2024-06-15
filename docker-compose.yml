@@ -1,0 +1,31 @@
+version: '3'
+
+services:
+  web:
+    container_name: cer2_web
+    build: .
+    command: python manage.py runserver 0.0.0.0:8000
+    volumes:
+      - .:/app/
+    ports:
+      - 8000:8000
+    depends_on:
+      - db
+    
+  db:
+    container_name: cer2_db
+    image: postgres:14
+    ports:
+      - 5432:5432
+    environment:
+     POSTGRES_USER: postgres
+     POSTGRES_DB: cer2
+     POSTGRES_PASSWORD: jvpo123.
+
+networks:
+  default:
+    name: cer2
+
+
+
+  
