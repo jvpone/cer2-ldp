@@ -1,5 +1,5 @@
 """
-URL configuration for Cert2 project.
+URL configuration for cer3 project.
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/5.0/topics/http/urls/
@@ -31,4 +31,3 @@ urlpatterns = [
     path('random/', CreateRandomNumber.as_view(), name='create_random_number'),
     path('admin/', admin.site.urls),
 ]
-
