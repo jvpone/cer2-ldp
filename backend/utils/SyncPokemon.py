@@ -47,11 +47,14 @@ for pokemon in pokemons:
         secondary_type = poke_data['types'][1]['type']['name']
     # print(name, pokedex_number, primary_type, secondary_type)
 
+    image_url = poke_data['sprites']['front_default'] #Obtener la url de la imagen
+
     poke_db, _ = Pokemon.objects.get_or_create(
-        name = name,
         pokedex_number = pokedex_number,
+        name = name,
         primary_type = primary_type,
-        secondary_type = secondary_type
+        secondary_type = secondary_type,
+        image_url = image_url #guardar la url
     )
 
     print(poke_db)
