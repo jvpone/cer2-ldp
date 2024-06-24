@@ -5,7 +5,7 @@ import os, sys
 current_path = os.path.abspath(os.path.dirname(__file__))
 current_path = current_path[:current_path.find(os.path.dirname(__file__))]
 sys.path.append(current_path)
-os.environ.setdefault("DJANGO_SETTINGS_MODULE", "cer3.settings")
+os.environ.setdefault("DJANGO_SETTINGS_MODULE", "Cert2.settings")
 from django.core.wsgi import get_wsgi_application
 application = get_wsgi_application()
 
