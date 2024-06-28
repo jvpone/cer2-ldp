@@ -12,3 +12,4 @@ class Pokemon(models.Model):
     primary_type = models.CharField(max_length=15)
     secondary_type = models.CharField(max_length=15, null=True, blank=True)
     image_url = models.URLField(max_length=200, default='') #url de la imagen pokemon
+
